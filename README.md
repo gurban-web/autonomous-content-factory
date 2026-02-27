@@ -47,3 +47,27 @@ Bu script 3 terminalı, n8n-i və preview browserini 1 kliklə ayağa qaldırır
 ## 4. Maliyyət və Resurs Optimizasiyası
 - **Disk Space:** Ollama (70GB+ modeller) silindi. Yalnız lazımi kiçik modellər və API-lər (Gemini Flash) istifadə olunur.
 - **API Cost:** Gemini Flash Lite ilə 1M token ~0.20$. Lokal orkestrasiya ilə aylıq xərc minimumda saxlanılır.
+
+
+## 5. Antigravity Super Skills (Agentic Workflows)
+Antigravity-nin agentic sistemini aşağıdakı "super skiller" ilə gücləndiririk:
+
+### A. Trend Analyzer Agent
+- **Görəvi:** Sosial media trendlərini (TikTok Creative Center, Google Trends) skan edir.
+- **Skill:** Newsletter-i sadəcə "text" olaraq deyil, həmin an viral olan "hook" strukturları ilə birləşdirir.
+- **Antigravity Rule:** `IF trend_score > 0.8 THEN use_viral_hook_template`.
+
+### B. Brand Consistency & QA Agent
+- **Görəvi:** Render olunmazdan əvvəl bütün assetləri (image, text, audio) yoxlayır.
+- **Skill:** Rəng tonları, fontlar və loqo yerləşimi markaya uyğundurmu? (Vision model inteqrasiyası ilə).
+- **Antigravity Rule:** `REJECT IF logo_not_visible OR font_family != 'Montserrat'`.
+
+### C. Auto-Optimizer Agent (Coding Skill)
+- **Görəvi:** Remotion kodunu analiz edir.
+- **Skill:** Render vaxtını azaltmaq üçün ağır animasiyaları sadələşdirir və ya assetləri (image compression) avtomatik optimizasiya edir.
+- **Antigravity Workflow:** `on_render_failure -> analyze_code -> simplify_layers -> retry`.
+
+### D. Revenue Strategist Agent
+- **Görəvi:** Abacus Dashboard-dan gələn datanı (view count, CTR) analiz edir.
+- **Skill:** Hansı tip kontentin daha çox pul qazandırdığını tapır və növbəti batch-i həmin "niche" üzrə planlayır.
+- **Antigravity Rule:** `SET priority = high FOR niche:finance IF rpm > 5.0`.
